@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TMC School</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper" >
+    
+	<header>
+    	
+    	<img src="logo.jpeg" width="50" height="50"  >
+    </header>
+    
+    <div class="nav">
+    <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+    <div class="dropdown">
+    	<button class="dropbtn" id="1">Events</button>
+        <div class="dropdown-content">
+        <a href="Events.html"  onClick="nav_item_selected(1)">SUNDAY VARIETY CONCERT</a>
+        <a href="ContactUs.html"  onClick="nav_item_selected(1)">TOWNSVILLE GUITAR ORCHESTRA</a>
+        <a href="BulletinBoard.html"  onClick="nav_item_selected(1)">ARCADIA STAGE BAND</a>
+        <a href="Instruments.html"  onClick="nav_item_selected(1)">BARRIER REEF ORCHESTRA</a>
+        </div>
+    </div>
+    <a href="#" id="2" onClick="nav_item_selected(2)">Bulletin Board</a>
+    <a href="#" id="3" onClick="nav_item_selected(3)">Musos</a>
+    <a href="#" id="4" onClick="nav_item_selected(4)">Members</a>
+    <a href="#" id="5" onClick="nav_item_selected(5)">Sponsors</a>
+    <a href="about_us.html" id="6" onClick="nav_item_selected(6)">About Us</a>
+    <a href="#" id="7" onClick="nav_item_selected(7)">Contact Us</a></div>
+    
+    <section id="col11" class="nav">
+    	<img src="ClientContent/TCMC Images Docs/events/FOTT.gif" alt="not available">
+    </section>
+    <div>
+    <section id="col4">
+    <h1> SUNDAY VARIETY CONCERT      </h1>
+    
+    
+       <h2>Presented by Friends of the Theatre</h2><br>
+       <h> 2pm Sunday  <br>
+         Road <br>
+       
+        Enquiries - please phone 00000
+       </h>
+    	
+  
+    </section>
+ 	</div>
+    <footer><h4>Student Group</h4></footer>
+    </div>
+</body>
+</html>
