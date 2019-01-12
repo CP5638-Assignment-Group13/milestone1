@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bulletin Board</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+
+
+
+	<div id="wrapper" >
+    
+	<header>
+    	
+    	<img src="img1.jpg" alt="no logo" >
+    </header>
+    
+    <div class="nav">
+    <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+    <div class="dropdown">
+    	<button class="dropbtn" id="1">Events</button>
+        <div class="dropdown-content">
+        <a href="Events.html"  onClick="nav_item_selected(1)">SUNDAY VARIETY CONCERT</a>
+        <a href="ContactUs.html"  onClick="nav_item_selected(1)">TOWNSVILLE GUITAR ORCHESTRA</a>
+        <a href="BulletinBoard.html"  onClick="nav_item_selected(1)">ARCADIA STAGE BAND</a>
+        <a href="Instruments.html"  onClick="nav_item_selected(1)">BARRIER REEF ORCHESTRA</a>
+        </div>
+    </div>
+    <a href="BulletinBoard.html" id="2" onClick="nav_item_selected(2)">Bulletin Board</a>
+    <a href="#" id="3" onClick="nav_item_selected(3)">Musos</a>
+    <a href="#" id="4" onClick="nav_item_selected(4)">Members</a>
+    <a href="#" id="5" onClick="nav_item_selected(5)">Sponsors</a>
+    <a href="about_us.html" id="6" onClick="nav_item_selected(6)">About Us</a>
+    <a href="#" id="7" onClick="nav_item_selected(7)">Contact Us</a></div>
+    
+    <section id="col81" >
+    	<h2 style="text-align:left;">Posted 3-Mar-19</h2>
+ <h4 style="text-align:left;"><ul class="post"> stu1
+Volunteer Singers / Musicians </ul> </h4>
+
+ <li style="text-align:left;" >Music lovers  </li><br />
+<li>I'm helping by organising an event format,  
+ </li><br />
+<li>Now that we are achieving some success, we need more people who can sing or play music. 
+Mass starts at 6pm and finishes about 10 to 7. </li><br />
+
+<p>If you would like to take part,</p> <p>please <strong> call Student </strong> anytime ....</p>
+
+<h2>Posted  2019 january</h2>
+<h4><ul class="post">TCB logo CALL OUT FOR MUSOS</ul> </h4>
+<li>Calling all Muso’s, entertainers, performers.. </li>
+
+<li>Deadline for initial submissions 3 March 2018. </li>
+<li>Artists will need to be insured for public liability.</li> 
+<p>If you are interested please email details</p> 
+<p><strong>Email: stu@123.com</strong></p>  	
+        	       
+            
+        	
+    </section>
+    <section id="col82">
+    <h3>Welcome to Bulletin Board </h3>
+    	
+       	
+    </section>
+    <section id="col83">
+     <p>     
+The Townsville Community Music Centre is getting busier all the time, and we need a part-time Office Administrator. 
+This is a long-term, part time, part-paid position (all conditions are negotiable). 
+Experience with not-for profit organisations would be an advantage. <br />
+We use MYOB and Microsoft Office, mostly Word and Excel. <br/>
+For more information -<br />
+
+<strong>-- email us --</strong><br/>
+ <strong>  </strong><br />
+
+        </p>
+    </section>
+    <section id ="col84">
+    </section>
+    
+    
+    
+    <footer><h4>Student Group</h4></footer>
+    </div>
+</body>
+</html>
